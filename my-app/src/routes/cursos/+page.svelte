@@ -49,9 +49,15 @@
 					</dl>
 					
 				</div>
+				{#if course_type==="Pós Graduação"}
 				<div>
-					<a href="/cursos/" class="btn btn-secondary btn-block rounded-full font-normal">Informações</a>
+					<a href="/cursos/pos-graduacao" class="btn btn-secondary btn-block rounded-full font-normal">Informações</a>
 				</div>
+				{:else if course_type==="CTESP"}
+				<a href="/cursos/ctesp" class="btn btn-secondary btn-block rounded-full font-normal">Informações</a>
+				{:else if course_type==="Curso Curta Duração"}
+				<a href="/cursos/ccs" class="btn btn-secondary btn-block rounded-full font-normal">Informações</a>
+				{/if}
 			</div>
 		</div>
 		<div class="w-[100%] absolute top-0 left-0 right-0 bottom-0 bg-accent -z-10 flex">
