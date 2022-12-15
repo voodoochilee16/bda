@@ -97,7 +97,7 @@
 <!-- Gets PG's from directus -->
 <section class=" m-4 md:m-8 md:my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
 	
-	{#each api_data as { id, Title, domains, school, main_img, type_course, type, date_ini }}
+	{#each api_data as { id, Title, domains, school, main_img, type_course, type, date_ini, slug}}
 	{#if type.course_type === "Pós Graduação"}    <!-- Gets PG's from directus -->
 	<article class="relative overflow-hidden rounded-lg text-[#FFF] z-10">
 		<header class="h-[50vw] sm:h-[30vw] xl:h-[30vw] p-3 sm:p-4 flex flex-col justify-end sm:pb-0 pb-0">
@@ -107,7 +107,7 @@
 		</header>
 		<footer class="flex items-center justify-between p-4">
 			<p class=" text-sm lg:text-lg">{date_ini}</p>
-			<a href="/cursos/pos-graduacao/slug" class="btn btn-xs xl:btn-md btn-secondary rounded-full font-normal">Mais info</a>
+			<a href="{`/cursos/pos-graduacao/${slug}`}" class="btn btn-xs xl:btn-md btn-secondary rounded-full font-normal">Mais info</a>
 		</footer>
 		<div class="w-[100%] absolute top-0 left-0 right-0 bottom-0 bg-accent -z-10 flex">
 			<img class="contrast-[1] mix-blend-multiply grayscale-[100%] w-[100%] object-cover" src="{assets + main_img.id}" alt="">
