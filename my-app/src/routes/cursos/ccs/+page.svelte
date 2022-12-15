@@ -47,7 +47,7 @@
 <!-- Gets PG's from directus -->
 <section class=" m-4 md:m-8 md:my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
 	
-	{#each api_data as { id, Title, domains, school, main_img, type_course, slug, type, date_ini, slug }}
+	{#each api_data as { id, Title, domains, school, main_img, type_course, type, date_ini, slug }}
 	{#if type.course_type === "Curso Curta Duração"}    <!-- Gets PG's from directus -->
 	<article class="relative overflow-hidden rounded-lg text-[#FFF] z-10">
 		<header class="h-[50vw] sm:h-[30vw] xl:h-[30vw] p-3 sm:p-4 flex flex-col justify-end sm:pb-0 pb-0">
